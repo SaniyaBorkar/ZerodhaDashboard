@@ -21,7 +21,7 @@ const Summary = () => {
       
       console.log(userId);
       try {
-        const response = await axios.get(`http://localhost:3002/investments/${userId}`);
+        const response = await axios.get(`${import.meta.env.api}/investments/${userId}`);
         setSummaryData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

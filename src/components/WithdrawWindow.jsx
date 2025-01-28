@@ -19,7 +19,7 @@ const WithdrawWindow = () => {
   const amountNumber = parseFloat(amount);
 
   const handleWithdrawFundsClick = () => {
-    axios.post("http://localhost:3002/withdrawFunds", {
+    axios.post(`${import.meta.env.api}/withdrawFunds`, {
       amount: amountNumber,
       userId: userId,
     });
