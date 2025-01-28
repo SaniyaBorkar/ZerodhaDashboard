@@ -24,7 +24,7 @@ const Holdings = () => {
   useEffect(() => {
     const fetchAllHoldings = async () => {
       try {
-        const response = await axios.post(`${import.meta.env.api}/allHoldings`, {
+        const response = await axios.post(`${import.meta.env.VITE_API}/allHoldings`, {
           userId: userId, // Pass the userId in the body
         });
         setAllHoldings(response.data); // Assuming the holdings are returned in the response
@@ -42,7 +42,7 @@ const Holdings = () => {
           
           console.log(userId);
           try {
-            const response = await axios.get(`${import.meta.env.api}/investments/${userId}`);
+            const response = await axios.get(`${import.meta.env.VITE_API}/investments/${userId}`);
             setSummaryData(response.data);
           } catch (error) {
             console.error("Error fetching data:", error);

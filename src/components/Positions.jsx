@@ -7,7 +7,7 @@ const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
 
 useEffect(()=>{
-    axios.get(`${import.meta.env.api}/allPositions`).then((res)=>{
+    axios.get(`${import.meta.env.VITE_API}/allPositions`).then((res)=>{
       console.log(res.data);
       setAllPositions(res.data);
     })

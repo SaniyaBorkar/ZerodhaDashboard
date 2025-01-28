@@ -19,7 +19,7 @@ const FundsWindow = () => {
   const amountNumber = parseFloat(amount);
 
   const handleAddFundsClick = () => {
-    axios.post(`${import.meta.env.api}/addfunds`, {
+    axios.post(`${import.meta.env.VITE_API}/addfunds`, {
       amount: amountNumber,
       userId: userId,
     });

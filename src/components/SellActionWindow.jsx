@@ -18,7 +18,7 @@ const SellActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = () => {
-    axios.post(`${import.meta.env.api}/newOrder`, {
+    axios.post(`${import.meta.env.VITE_API}/newOrder`, {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
